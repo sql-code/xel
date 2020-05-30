@@ -33,7 +33,7 @@ export default class XMenuElement extends HTMLElement {
       padding: 4px 0;
       z-index: 1001;
       box-sizing: border-box;
-      background: white;
+      background: --menu-background;
       cursor: default;
       overflow: auto;
       flex-direction: column;
@@ -95,7 +95,7 @@ export default class XMenuElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XMenuElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XMenuElement.#shadowTemplate.content, true));
 

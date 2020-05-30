@@ -246,7 +246,7 @@ export default class XMenuItemElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XMenuItemElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XMenuItemElement.#shadowTemplate.content, true));
 

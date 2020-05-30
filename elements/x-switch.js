@@ -164,7 +164,7 @@ export default class XSwitchElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XSwitchElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XSwitchElement.#shadowTemplate.content, true));
 

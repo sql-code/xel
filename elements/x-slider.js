@@ -407,7 +407,7 @@ export default class XSliderElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed", delegatesFocus: true});
+    this.#shadowRoot = this.attachShadow({mode: "open", delegatesFocus: true});
     this.#shadowRoot.adoptedStyleSheets = [XSliderElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XSliderElement.#shadowTemplate.content, true));
 

@@ -209,7 +209,7 @@ export default class XCheckboxElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XCheckboxElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XCheckboxElement.#shadowTemplate.content, true));
 

@@ -64,7 +64,7 @@ export default class XLabelElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XLabelElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XLabelElement.#shadowTemplate.content, true));
   }

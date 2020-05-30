@@ -119,7 +119,7 @@ export default class XPopoverElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XPopoverElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XPopoverElement.#shadowTemplate.content, true));
 

@@ -133,7 +133,7 @@ export default class XAccordionElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XAccordionElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XAccordionElement.#shadowTemplate.content, true));
 

@@ -294,7 +294,7 @@ export default class XInputElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed", delegatesFocus: true});
+    this.#shadowRoot = this.attachShadow({mode: "open", delegatesFocus: true});
     this.#shadowRoot.adoptedStyleSheets = [XInputElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XInputElement.#shadowTemplate.content, true));
 

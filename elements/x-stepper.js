@@ -143,7 +143,7 @@ export default class XStepperElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XStepperElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XStepperElement.#shadowTemplate.content, true));
 

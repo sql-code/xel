@@ -37,7 +37,7 @@ export default class XCardElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XCardElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XCardElement.#shadowTemplate.content, true));
   }

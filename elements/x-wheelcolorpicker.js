@@ -250,7 +250,7 @@ export default class XWheelColorPickerElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XWheelColorPickerElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XWheelColorPickerElement.#shadowTemplate.content, true));
 

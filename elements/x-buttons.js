@@ -113,7 +113,7 @@ export default class XButtonsElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XButtonsElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XButtonsElement.#shadowTemplate.content, true));
 

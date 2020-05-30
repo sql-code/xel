@@ -122,7 +122,7 @@ export default class XIconElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XIconElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XIconElement.#shadowTemplate.content, true));
 

@@ -316,7 +316,7 @@ export default class XNumberInputElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed", delegatesFocus: true});
+    this.#shadowRoot = this.attachShadow({mode: "open", delegatesFocus: true});
     this.#shadowRoot.adoptedStyleSheets = [XNumberInputElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XNumberInputElement.#shadowTemplate.content, true));
 

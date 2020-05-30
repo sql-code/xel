@@ -319,7 +319,7 @@ export default class XBarsColorPickerElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XBarsColorPickerElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XBarsColorPickerElement.#shadowTemplate.content, true));
 

@@ -176,7 +176,7 @@ export default class XSelectElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XSelectElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XSelectElement.#shadowTemplate.content, true));
 

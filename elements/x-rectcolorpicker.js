@@ -247,7 +247,7 @@ export default class XRectColorPickerElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XRectColorPickerElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XRectColorPickerElement.#shadowTemplate.content, true));
 

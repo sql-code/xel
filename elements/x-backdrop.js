@@ -48,7 +48,7 @@ export default class XBackdropElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XBackdropElement.#shadowStyleSheet];
 
     this.addEventListener("pointerdown", (event) => event.preventDefault()); // Don't steal the focus

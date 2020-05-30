@@ -51,7 +51,7 @@ export default class XTagsElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XTagsElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XTagsElement.#shadowTemplate.content, true));
 

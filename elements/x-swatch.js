@@ -83,7 +83,7 @@ export default class XSwatchElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XSwatchElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XSwatchElement.#shadowTemplate.content, true));
 

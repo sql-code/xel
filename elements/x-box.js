@@ -52,7 +52,7 @@ export default class XBoxElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XBoxElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XBoxElement.#shadowTemplate.content, true));
   }

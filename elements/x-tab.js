@@ -166,7 +166,7 @@ export default class XTabElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XTabElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XTabElement.#shadowTemplate.content, true));
 

@@ -125,7 +125,7 @@ export default class XDocTabsElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed", delegatesFocus: false});
+    this.#shadowRoot = this.attachShadow({mode: "open", delegatesFocus: false});
     this.#shadowRoot.adoptedStyleSheets = [XDocTabsElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XDocTabsElement.#shadowTemplate.content, true));
 

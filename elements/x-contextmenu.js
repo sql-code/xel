@@ -51,7 +51,7 @@ export default class XContextMenuElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XContextMenuElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XContextMenuElement.#shadowTemplate.content, true));
 

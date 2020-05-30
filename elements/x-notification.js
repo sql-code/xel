@@ -108,7 +108,7 @@ export default class XNotificationElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XNotificationElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XNotificationElement.#shadowTemplate.content, true));
   }

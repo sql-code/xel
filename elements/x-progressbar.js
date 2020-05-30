@@ -151,7 +151,7 @@ export default class XProgressbarElement extends HTMLElement {
   constructor() {
     super();
 
-    this.#shadowRoot = this.attachShadow({mode: "closed"});
+    this.#shadowRoot = this.attachShadow({mode: "open"});
     this.#shadowRoot.adoptedStyleSheets = [XProgressbarElement.#shadowStyleSheet];
     this.#shadowRoot.append(document.importNode(XProgressbarElement.#shadowTemplate.content, true));
 

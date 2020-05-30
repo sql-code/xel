@@ -38,6 +38,8 @@ export default class XMenuElement extends HTMLElement {
       overflow: auto;
       flex-direction: column;
       -webkit-app-region: no-drag;
+      --v-target-align: bottom;
+      --target-align: left;
       --align: start;
       --scrollbar-background: rgba(0, 0, 0, 0.2);
       --scrollbar-width: 6px;
@@ -283,6 +285,7 @@ export default class XMenuElement extends HTMLElement {
 
       let align = getComputedStyle(this).getPropertyValue("--align").trim();
       let targetAlign = getComputedStyle(this).getPropertyValue("--target-align").trim();
+      let vTargetAlign = getComputedStyle(this).getPropertyValue("--v-target-align").trim();
       let elementBounds = element.getBoundingClientRect();
       let menuBounds = this.getBoundingClientRect();
       let extraLeft = 0; // Extra offset needed when menu has fixed-positioned ancestor(s)
@@ -470,6 +473,11 @@ export default class XMenuElement extends HTMLElement {
         if (targetAlign === "right") {
           let left = elementBounds.right - menuBounds.width;
           this.style.left = left + "px";
+        }
+
+        if (vTargetAlign === "top") {
+          let top = elementBounds.top;
+          this.style.top = top + "px";
         }
 
         // Animate the menu
